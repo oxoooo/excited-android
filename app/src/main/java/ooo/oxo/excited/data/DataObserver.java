@@ -47,10 +47,11 @@ public class DataObserver implements IData.IItems {
                 items.add(new Picture(card, index, adapter, cards, showPlus()));
             }
         }
-        if (items.size() > 1)
+        if (cards.size() > 0) {
             items.add(new Footer());
-        else
+        } else {
             items.add(new EmptyChannel());
+        }
         adapter.notifyDataSetChanged();
     }
 
