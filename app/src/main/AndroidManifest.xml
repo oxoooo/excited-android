@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="ooo.oxo.excited">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${APP_NAME}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5817ff2675ca352ff900134c"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL}"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".BrowserActivity"/>
+        <activity
+            android:name=".ImageActivity"
+            android:theme="@style/ImageTheme"/>
+        <activity
+            android:name=".ChannelActivity"
+            android:label=""
+            android:theme="@style/AppTheme.Translucent"/>
+        <activity
+            android:name=".ShareLinkActivity"
+            android:label="@string/share_label">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SharePhotoActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".PreviewActivity"
+            android:label=""/>
+        <activity
+            android:name=".channel.SelectChannelActivity"
+            android:label=""/>
+
+        <provider
+            android:name=".ImageFileProvider"
+            android:authorities="${applicationId}.images"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/images"/>
+        </provider>
+
+        <activity
+            android:name=".SelectCountryActivity"
+            android:label="@string/countries"/>
+    </application>
+
+</manifest>

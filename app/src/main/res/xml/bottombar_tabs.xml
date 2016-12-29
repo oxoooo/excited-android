@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_excited"
+        icon="@drawable/ic_btn_excited"
+        title="@string/tab_excited" />
+    <tab
+        id="@+id/tab_channels"
+        icon="@drawable/ic_btn_channel"
+        title="@string/tab_channels" />
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_btn_fav"
+        title="@string/tab_favorites" />
+
+    <tab
+        id="@+id/tab_share"
+        icon="@drawable/ic_add_black_24px"
+        title="@string/tab_share"/>
+</tabs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:background="@android:color/white"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_category"/>
+
+    <FrameLayout
+        android:id="@+id/movie_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/video_item_background"
+        android:foreground="?selectableItemBackgroundBorderless">
+
+        <ooo.oxo.excited.widget.RatioImageView
+            android:id="@+id/video_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:layout_height="200dp"/>
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play"
+            tools:ignore="ContentDescription"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        tools:text="This is home by Tom"/>
+
+    <include layout="@layout/layout_plus"/>
+
+</LinearLayout>

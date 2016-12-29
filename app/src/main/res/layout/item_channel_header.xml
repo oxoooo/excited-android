@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:divider="@drawable/divider_line"
+              android:orientation="vertical"
+              android:showDividers="end">
+
+
+    <TextView
+        android:id="@+id/create_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        tools:text="创建于 2016-11-11"/>
+
+    <TextView
+        android:id="@+id/follow"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/follow_selectable_background"
+        android:gravity="center"
+        tools:text="@string/follow"/>
+
+    <TextView
+        android:id="@+id/channel_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        tools:text="无论丑的多么惊天动地都能瞬间变成仙子下凡，四大邪术自诞生以来教众不断。“亚洲四大邪术”即泰国变性术、韩国整容术、日本化妆术、中国PS术。"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/find_excited"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"/>
+
+</LinearLayout>

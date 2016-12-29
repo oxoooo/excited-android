@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-16dp">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+                android:color="?android:attr/colorControlHighlight"
+                android:radius="56dp">
+        </ripple>
+    </item>
+</layer-list>

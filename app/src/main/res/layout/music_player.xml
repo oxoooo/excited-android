@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webView_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:elevation="16dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ooo.oxo.excited.widget.MusicView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolbar" />
+
+    <ooo.oxo.excited.view.MusicPlayerBottomBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_arrow_downward_black_24dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_close_black_24dp"
+            tools:ignore="ContentDescription" />
+
+    </ooo.oxo.excited.view.MusicPlayerBottomBar>
+
+    <ImageView
+        android:id="@+id/progress_image"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_glass"
+        android:tint="@android:color/black"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+</RelativeLayout>

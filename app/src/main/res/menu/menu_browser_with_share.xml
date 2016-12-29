@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/open_in_browser"
+        android:title="@string/open_in_browser"/>
+    <item
+        android:id="@+id/share_action"
+        android:title="@string/share"/>
+
+</menu>

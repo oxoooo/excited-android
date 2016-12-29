@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            article {
+                font-family: sans-serif;
+                font-size: 17px;
+                line-height: 1.8;
+                color: #555555;
+                word-break: break-all;
+                padding: 10px;
+            }
+
+            article * {
+                max-width: 100%;
+            }
+
+            h1, h2, h3, h4, p, blockquote {
+                margin: 15px 0;
+            }
+
+            h1 {
+                font-size: 28px;
+                font-weight: normal;
+                line-height: 1.4;
+                color: #222222;
+            }
+
+            h2 {
+                font-size: 22px;
+                font-weight: normal;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: normal;
+            }
+
+            h4 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            a, a:visited {
+                color: #222222;
+            }
+
+            blockquote {
+                color: #999999;
+                font-size: 15px;
+                font-weight: normal;
+                border-left: 2px solid #dddddd;
+                padding: 4px 8px;
+            }
+
+            blockquote > * {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            blockquote > :first-child {
+                margin-top: 0;
+            }
+
+            blockquote > :last-child {
+                margin-bottom: 0;
+            }
+
+            hr {
+                border: none;
+                border-bottom: 1px solid #eeeeee;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h1>{{title}}</h1>
+            {{article}}
+        </article>
+        <script>
+            document.addEventListener('click', (e) => {
+                if (e.target && e.target.matches('img[src]') && e.target.src) {
+                    ReaderMode.openImage(e.target.src);
+                }
+            });
+        </script>
+    </body>
+</html>

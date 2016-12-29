@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ooo.oxo.excited.widget.InsetsToolbar
+                android:id="@+id/toolbar"
+                style="@style/LightToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?actionBarSize"
+                android:fitsSystemWindows="true"
+                app:contentInsetStart="0dp"
+                app:navigationIcon="@drawable/ic_arrow_back_black_24px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:alpha="0"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/CollapsingTextAppearance"/>
+
+                    <Switch
+                        android:id="@+id/reading_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:checked="true"
+                        android:switchPadding="8dp"
+                        android:text="@string/reading_mode"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+                </LinearLayout>
+
+            </ooo.oxo.excited.widget.InsetsToolbar>
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/progressbar"
+                style="@style/NumberProgressBar_Default"
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                app:progress_reached_bar_height="2dp"
+                app:progress_text_size="0sp"
+                app:progress_text_visibility="invisible"
+                app:progress_unreached_bar_height="2dp"/>
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ooo.oxo.excited.widget.AjaXWalkView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:background="@android:color/white"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ooo.oxo.excited.widget.AjaXWalkView
+            android:id="@+id/reading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:background="@android:color/white"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

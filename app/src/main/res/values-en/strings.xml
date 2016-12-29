@@ -1,0 +1,10 @@
+<resources>
+    <string name="s_ago">&#160;seconds ago</string>
+    <string name="min_ago">&#160;minutes ago</string>
+    <string name="h_ago">&#160;hours ago</string>
+    <string name="d_ago">&#160;days ago</string>
+    <string name="month_ago">&#160;months ago</string>
+    <string name="yesterday">yesterday</string>
+    <string name="y_ago">&#160;years ago</string>
+    <string name="retry">retry</string>
+</resources>

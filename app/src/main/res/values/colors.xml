@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#222222</color>
+
+    <color name="music_card_background">#F2ECEC</color>
+    <color name="web_card_background">#FBF9F9</color>
+    <color name="plus_default_color">#E7E7E7</color>
+    <color name="video_item_background">#55000000</color>
+    <color name="more_vert_color">#445262</color>
+    <color name="toolbar_title_color">#353C45</color>
+
+    <color name="text_color">#353C45</color>
+    <color name="time_text_color">#B9BDC3</color>
+    <color name="web_text_color">#7F858B</color>
+    <color name="category_text_color">#445262</color>
+    <color name="text_hint_color">#D9D9D9</color>
+    <color name="edit_box_color">#FBFBFB</color>
+    <color name="line_color">#EFEFEF</color>
+    <color name="divider_color">#D8D9DA</color>
+
+    <color name="empty_text_color">#D4D4D4</color>
+
+    <color name="picture_place_holder">#D8D8D8</color>
+    <color name="take_photo_color">#F9F9F9</color>
+
+    <color name="floating_letter_background_color">#44444444</color>
+    <color name="list_background">#fafafa</color>
+
+</resources>

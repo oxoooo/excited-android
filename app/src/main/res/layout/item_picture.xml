@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:background="@android:color/white"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_category"/>
+
+    <ooo.oxo.excited.widget.RatioImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop"
+        tools:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/picture_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/web_text_color"
+        android:visibility="visible"
+        tools:text="Instagram Instagram Instagram"/>
+
+    <include layout="@layout/layout_plus"/>
+
+</LinearLayout>

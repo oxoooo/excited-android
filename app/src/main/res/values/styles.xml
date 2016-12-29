@@ -1,0 +1,60 @@
+<resources>
+
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="Base.AppTheme"/>
+
+    <style name="AppTheme.Translucent" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ExpandedTextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="CollapsingTextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/toolbar_title_color</item>
+    </style>
+
+    <style name="BB_BottomBarItem_TitleStyle.OxoStyle">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="LightToolbarThemeOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/toolbar_title_color</item>
+    </style>
+
+    <style name="LightToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:theme">@style/LightToolbarThemeOverlay</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextAppearance</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:tint">@android:color/black</item>
+        <item name="titleTextColor">@color/toolbar_title_color</item>
+    </style>
+
+    <style name="ImageTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:immersive">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="ExpandedChannelTitleTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="ImageTheme.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:background="@android:color/white"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_category"/>
+
+    <LinearLayout
+        android:id="@+id/web_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:background="@android:color/white"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:orientation="vertical">
+
+        <ooo.oxo.excited.widget.RatioImageView
+            android:id="@+id/web_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/web_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:visibility="visible"
+            tools:text="sublime.fyi"/>
+
+        <TextView
+            android:id="@+id/web_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/web_text_color"
+            android:visibility="visible"
+            tools:text="企业家，设计师和行业领袖。简单的概念和很棒的音乐的背景"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_plus"/>
+
+</LinearLayout>

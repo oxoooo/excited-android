@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="128dp">
+
+    <View
+        android:layout_width="37dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/share_text"
+        android:textColor="@color/more_vert_color"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/share_icon_padding"
+        android:background="@drawable/share_selectable_background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/share_icon_padding">
+
+        <ImageView
+            android:layout_width="@dimen/share_icon_size"
+            android:layout_height="@dimen/share_icon_size"
+            android:src="@drawable/ic_btn_link"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/link"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/share_selectable_background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/share_icon_padding">
+
+        <ImageView
+            android:layout_width="@dimen/share_icon_size"
+            android:layout_height="@dimen/share_icon_size"
+            android:src="@drawable/ic_btn_sharephoto"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/picture"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ooo.oxo.excited.widget.InsetsCoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expanded_app_bar_height"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="ooo.oxo.excited.view.OxoAppBarBehavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/CollapsingTextAppearance"
+            app:expandedTitleMarginStart="16dp"
+            app:expandedTitleTextAppearance="@style/ExpandedTextAppearance"
+            app:layout_scrollFlags="snap|scroll|exitUntilCollapsed">
+
+            <ooo.oxo.excited.widget.InsetsToolbar
+                android:id="@+id/toolbar"
+                style="@style/LightToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:fitsSystemWindows="true">
+
+            </ooo.oxo.excited.widget.InsetsToolbar>
+
+            <FrameLayout
+                android:id="@+id/play_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="16dp"
+                android:fitsSystemWindows="true"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_bot"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_top"
+                    tools:ignore="ContentDescription"/>
+
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ooo.oxo.excited.widget.InsetsFrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:bb_activeTabAlpha="1"
+        app:bb_activeTabColor="@color/text_color"
+        app:bb_behavior="shy|underNavbar|shifting"
+        app:bb_inActiveTabAlpha="0.6"
+        app:bb_inActiveTabColor="#222222"
+        app:bb_showShadow="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_titleTextAppearance="@style/BB_BottomBarItem_TitleStyle.OxoStyle"/>
+
+    <include
+        layout="@layout/music_player"
+        android:visibility="gone"/>
+</ooo.oxo.excited.widget.InsetsCoordinatorLayout>
+
+

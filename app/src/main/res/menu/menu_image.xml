@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/save"
+        android:title="@string/save_wallpaper"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/set_wallpaper"
+        android:title="@string/set_wallpaper"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+</menu>

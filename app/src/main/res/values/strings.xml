@@ -1,0 +1,191 @@
+<resources>
+
+    <string name="app_name">馒头好不好</string>
+    <string name="app_name_debug">好不好 (debug)</string>
+
+    <string name="tab_excited">Excited</string>
+    <string name="tab_channels">Channels</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_share">Share</string>
+
+    <string name="verify_code">获取验证码</string>
+    <string name="login_submit">登录</string>
+    <string name="register_submit">注册</string>
+    <string name="input_code">输入验证码</string>
+    <string name="input_password">输入密码</string>
+    <string name="input_phone">输入手机号</string>
+    <string name="input_phone_or_email">输入手机号/邮箱</string>
+    <string name="send_verify_code">发送验证码</string>
+    <string name="sending_code">正在发送验证码，请稍等&#8230;</string>
+    <string name="phone_empty">电话不能为空</string>
+    <string name="code_phone_empty">电话和验证码不能为空</string>
+    <string name="login_message">你还没有登录，请先登录</string>
+    <string name="register_text">注册即视为您已阅读并接受</string>
+    <string name="user_protocol">用户许可协议</string>
+    <string name="server_error">服务器无法处理</string>
+
+    <string name="share_text">你有什么要分享给大家？</string>
+    <string name="input_hint">输入链接地址</string>
+    <string name="share_link">投稿</string>
+    <string name="share_label">搞个大新闻</string>
+    <string name="sending_image_card">分享图片中…</string>
+    <string name="sending_web_card">分享链接中…</string>
+    <string name="sending_music_card">分享音乐中…</string>
+    <string name="post_success">投稿成功</string>
+    <string name="post_error">连接超时，或者该网站我们不支持</string>
+    <string name="link_empty_text">输入的链接地址不能为空</string>
+    <string name="link">链接</string>
+    <string name="picture">图片</string>
+    <string name="next_step">下一步</string>
+    <string name="required_camera_store_permission">拍照需要有相机和存储写入权限</string>
+    <string name="edit_prompt">以下内容可编辑</string>
+    <string name="select_channel">选择&#160;Channel</string>
+    <string name="input_title">请输入标题(可不填)</string>
+    <string name="input_url_desc">请输入链接描述(可不填)</string>
+    <string name="empty_channel_text">必须选择Channel</string>
+
+    <string name="preview">预览</string>
+    <string name="preview_wrong_text">如果不是服务器挂掉了\n那就是你的链接被钦定了</string>
+    <string name="share_link_title">分享链接</string>
+    <string name="add_photo_description">添加描述</string>
+    <string name="empty_photo_description">添加描述</string>
+    <string name="input_nickname">填写昵称（只需填一次）</string>
+    <string name="release">投稿</string>
+    <string-array name="photo_select_options">
+        <item>相机</item>
+        <item>相册</item>
+    </string-array>
+
+    <string name="wallpaper">壁纸</string>
+    <string name="report">举报</string>
+    <string name="feedback_text">感谢反馈，我们会尽快处理</string>
+    <string name="my_share">我的发布</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="footer_text">很惭愧，只有这么一点了</string>
+    <string name="reading_mode">阅读模式</string>
+    <string name="open_in_browser">在浏览器中打开</string>
+    <string name="save_wallpaper">保存图片</string>
+    <string name="permission_required">保存照片需要有写入权限</string>
+    <string name="save_success">图片保存到 %s</string>
+    <string name="set_wallpaper">设置为壁纸</string>
+
+    <string name="create_at">创建于&#160;%s</string>
+    <string name="follow">+&#160;follow</string>
+    <string name="unfollow">unfollow</string>
+    <string name="find_excited">发现好不好精选</string>
+    <string name="follow_success">follow 成功</string>
+    <string name="unfollow_success">unfollow 成功</string>
+
+    <string name="favorites_login_prompt">要看到自己收藏的内容请先登录</string>
+    <string name="favorites_empty_data_text">你还没发布过任何内容\n点击右下角，搞个大新闻</string>
+    <string name="share">分享</string>
+    <string name="share_login_prompt">要使用分享请先登录</string>
+    <string name="send_to">分享到</string>
+    <string name="share_content_format" formatted="false">%s: %s\n  来自 馒头好不好 的分享</string>
+    <string name="action_register">注册</string>
+    <string name="welcome_register">欢迎注册</string>
+    <string name="welcome_login">欢迎登陆</string>
+    <string name="next">继续</string>
+    <string name="countries">国家/地区</string>
+    <string name="action_done">完成</string>
+    <string name="file_not_exits">文件不存在</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="uploading">分享中</string>
+    <string name="channel_empty_text">你来晚了，全部被吃掉了</string>
+
+    <array name="images">
+        <item>保存图片</item>
+        <item>设置为壁纸</item>
+    </array>
+
+    <string-array name="areas_zh">
+        <item>中国</item>
+        <item>台湾省</item>
+        <item>香港行政区</item>
+        <item>澳门行政区</item>
+        <item>澳大利亚</item>
+        <item>巴西</item>
+        <item>德国</item>
+        <item>俄罗斯</item>
+        <item>法国</item>
+        <item>韩国</item>
+        <item>加拿大</item>
+        <item>马来西亚</item>
+        <item>美国</item>
+        <item>日本</item>
+        <item>泰国</item>
+        <item>乌克兰</item>
+        <item>西班牙</item>
+        <item>新加坡</item>
+        <item>新西兰</item>
+        <item>意大利</item>
+        <item>印度</item>
+        <item>印度尼西亚</item>
+        <item>英国</item>
+        <item>越南</item>
+    </string-array>
+    <string-array name="area_index_zh">
+        <item>☆</item>
+        <item>☆</item>
+        <item>☆</item>
+        <item>☆</item>
+        <item>A</item>
+        <item>B</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>H</item>
+        <item>J</item>
+        <item>M</item>
+        <item>M</item>
+        <item>R</item>
+        <item>T</item>
+        <item>W</item>
+        <item>X</item>
+        <item>X</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="areas_number_zh">
+        <item>+86</item>
+        <item>+886</item>
+        <item>+852</item>
+        <item>+853</item>
+        <item>+61</item>
+        <item>+55</item>
+        <item>+49</item>
+        <item>+7</item>
+        <item>+33</item>
+        <item>+82</item>
+        <item>+1</item>
+        <item>+60</item>
+        <item>+1</item>
+        <item>+81</item>
+        <item>+66</item>
+        <item>+380</item>
+        <item>+34</item>
+        <item>+65</item>
+        <item>+64</item>
+        <item>+39</item>
+        <item>+91</item>
+        <item>+62</item>
+        <item>+44</item>
+        <item>+84</item>
+    </string-array>
+
+    <string name="min_ago">&#160;分钟前</string>
+    <string name="month_ago">&#160;个月前</string>
+    <string name="y_ago">&#160;年前</string>
+    <string name="yesterday">昨天</string>
+    <string name="s_ago">&#160;秒前</string>
+    <string name="h_ago">&#160;小时前</string>
+    <string name="d_ago">&#160;天前</string>
+
+    <string name="retry">重试</string>
+</resources>

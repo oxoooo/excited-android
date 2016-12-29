@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ooo.oxo.excited.widget.InsetsToolbar
+            android:id="@+id/toolbar"
+            style="@style/LightToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24px"
+            app:title="@string/add_photo_description"/>
+
+        <ooo.oxo.excited.widget.RatioImageView
+            android:id="@+id/thumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:layout_height="210dp"/>
+
+        <EditText
+            android:id="@+id/photo_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edit_box_color"
+            android:hint="@string/add_photo_description"
+            android:inputType="textUri"
+            android:maxLines="4"
+            android:minHeight="50dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tv_select_channel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?selectableItemBackground"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24px"
+            android:drawableTint="@color/text_color"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:text="@string/select_channel"
+            android:textColor="@color/web_text_color"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+    </LinearLayout>
+
+</ScrollView>
