@@ -271,7 +271,8 @@ public class MainActivity extends AppCompatActivity
         appBarLayout.setExpanded(expanded);
 
         OxoAppBarBehavior behavior =
-                (OxoAppBarBehavior) ((CoordinatorLayout.LayoutParams) appBarLayout.getLayoutParams()).getBehavior();
+                (OxoAppBarBehavior) ((CoordinatorLayout.LayoutParams)
+                        appBarLayout.getLayoutParams()).getBehavior();
         if (behavior != null) {
             behavior.setCanMove(expanded);
             behavior.setCanDrag(canDrag);
@@ -322,18 +323,15 @@ public class MainActivity extends AppCompatActivity
      * @param iconVisible 控制Toolbar中唱片动画可见性，亦可表述音乐是否保持播放
      */
     private void setMusicViewShown(boolean enabled, boolean iconVisible) {
+        if (Build.VERSION.SDK_INT >= 23)
+            StatusBarUtils.setLightStatusBar(getWindow().getDecorView());
+        playContent.setVisibility(iconVisible ? View.VISIBLE : View.INVISIBLE);
+
         if (enabled) {
-            if (Build.VERSION.SDK_INT >= 23)
-                StatusBarUtils.clearLightStatusBar(getWindow().getDecorView());
             MiuiStatusBarCompat.setStatusBarDarkMode(false, this);
-            webViewContent.setVisibility(View.VISIBLE);
-            playContent.setVisibility(iconVisible ? View.VISIBLE : View.INVISIBLE);
             AnimUtils.animIn(webViewContent);
         } else {
-            if (Build.VERSION.SDK_INT >= 23)
-                StatusBarUtils.setLightStatusBar(getWindow().getDecorView());
             MiuiStatusBarCompat.setStatusBarDarkMode(true, this);
-            playContent.setVisibility(iconVisible ? View.VISIBLE : View.INVISIBLE);
             if (!iconVisible) webView.resetUrl();
             AnimUtils.animOut(webViewContent);
         }
@@ -387,9 +385,7 @@ public class MainActivity extends AppCompatActivity
         MobclickAgent.onResume(this);
         if (bottomBar != null) {
             if (Build.VERSION.SDK_INT >= 24) {
-                if (isInMultiWindowMode()) {
-
-                }
+                if (isInMultiWindowMode()) {}
             }
         }
     }

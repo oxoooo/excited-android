@@ -2,7 +2,6 @@ package ooo.oxo.excited.fragment;
 
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -40,14 +39,6 @@ public class ShareFragment extends BaseFragment implements View.OnClickListener 
 
     private File photoFile;
 
-    private Context context;
-
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = context;
-    }
 
     @Nullable
     @Override

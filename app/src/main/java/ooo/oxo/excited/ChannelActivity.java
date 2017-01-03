@@ -61,11 +61,9 @@ public class ChannelActivity extends RxAppCompatActivity implements
     private AppBarLayout appBarLayout;
 
     private MultiTypeAdapter adapter;
-
     private IData.IItems iItems;
     private Items items = new Items();
     private QueryAPI queryAPI;
-
     private Channel channel;
 
 

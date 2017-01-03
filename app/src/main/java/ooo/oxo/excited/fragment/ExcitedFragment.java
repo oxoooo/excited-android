@@ -1,7 +1,6 @@
 package ooo.oxo.excited.fragment;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -39,30 +38,22 @@ import ooo.oxo.excited.utils.SnackbarUtils;
 
 public class ExcitedFragment extends BaseFragment implements OnItemClickListener, IData.IItems {
 
+    public static final String TAG = "Excited";
+
     private RecyclerView list;
     private SwipeRefreshLayout refreshLayout;
-
-    public static final String TAG = "Excited";
+    private View convertView;
 
     private MultiTypeAdapter adapter;
     private Items items = new Items();
     private IItems iItems;
 
     private QueryAPI queryAPI;
-    private Context context;
-
     private Callback callback;
 
-    private View convertView;
 
     public void registerCallback(Callback callback) {
         this.callback = callback;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 
     @Override

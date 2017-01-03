@@ -1,7 +1,6 @@
 package ooo.oxo.excited.fragment;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -88,7 +87,6 @@ public class FavoritesFragment extends BaseFragment
 
     private QueryAPI queryAPI;
     private Items items = new Items();
-    private Context context;
     private IItems iItems;
     private Callback callback;
     private boolean isLogin;
@@ -98,12 +96,6 @@ public class FavoritesFragment extends BaseFragment
 
     public void registerCallback(Callback callback) {
         this.callback = callback;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 
     @Override

@@ -1,7 +1,6 @@
 package ooo.oxo.excited.fragment;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,28 +30,18 @@ import ooo.oxo.excited.utils.ToastUtils;
 public class ChannelFragment extends BaseFragment implements ChannelAdapter.OnChannelClickListener {
 
     public static final String CHANNEL = "channel";
-
     public static final String TAG = "Channel";
+    public final int REQUEST_CHANNEL = 0x1;
 
     private SwipeRefreshLayout refreshLayout;
     private RecyclerView list;
     private View dividerView;
+    private View convertView;
 
     private ChannelAdapter adapter;
     private QueryAPI queryAPI;
     private List<Channel> channels = new ArrayList<>();
 
-    private Context context;
-
-    private View convertView;
-
-    public final int REQUEST_CHANNEL = 0x1;
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = context;
-    }
 
     @Nullable
     @Override
@@ -74,8 +63,8 @@ public class ChannelFragment extends BaseFragment implements ChannelAdapter.OnCh
             int offset = getResources().getDimensionPixelOffset(R.dimen.default_toolbar_height);
             refreshLayout.setProgressViewOffset(true, -offset / 4, offset / 2);
 
-            if (getActivity() instanceof AppBarCallback) {
-                AppBarLayout appBarLayout = ((AppBarCallback) getActivity()).getAppBar();
+            if (context instanceof AppBarCallback) {
+                AppBarLayout appBarLayout = ((AppBarCallback) context).getAppBar();
                 appBarLayout.addOnOffsetChangedListener(
                         (appBarLayout1, verticalOffset) -> {
                             dividerView.setPivotX(0);
@@ -109,12 +98,13 @@ public class ChannelFragment extends BaseFragment implements ChannelAdapter.OnCh
         if (ScreenUtils.getHeight(context) > ScreenUtils.getWidth(context)) {
             if (containerCallback != null) {
                 ViewGroup container = containerCallback.getContainer();
-                container.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                container.getViewTreeObserver().addOnGlobalLayoutListener(
+                        new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
                         if (container.getHeight() > 0) {
-                            int top = getActivity().findViewById(R.id.appbar).getHeight();
-                            int height = getActivity().findViewById(R.id.bottomBar).getHeight();
+                            int top = context.findViewById(R.id.appbar).getHeight();
+                            int height = context.findViewById(R.id.bottomBar).getHeight();
                             int target = ScreenUtils.getHeight(context) - top - height;
                             adapter.setHeight(target);
                             container.getViewTreeObserver().removeOnGlobalLayoutListener(this);
